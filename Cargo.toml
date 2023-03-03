@@ -1,0 +1,10 @@
+[package]
+name = "dsolver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4.0.26", features = ["derive"] }
+bio = "1.1.0"
+substring = "1.4.5"
+strum_macros = "0.24.3"
