@@ -55,3 +55,24 @@ OutPut:
 Move: Bet 9 BB
 ```
 ### flop
+Usage: 
+* <DISTRIBUTION> take char 'y' as positive to generate odd distribution, other char as negative.
+```sh
+Usage: dsolver --strategy <STRATEGY> flop <HOLE> <BOARD> <DISTRIBUTION>
+```
+Command:
+```
+dsolver --strategy small-ball flop ahkd 5c5h9s y
+```
+OutPut:
+```
+  Move: Check/Fold
+
+Hand Odd by River:
+TwoPair-------35.0%
+ThreeOfAKind--8.4%
+FullHouse-----1.7%
+FourOfAKind---0.1%
+Straight------0.0%
+Flush---------0.0%
+```
