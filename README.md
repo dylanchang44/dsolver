@@ -66,7 +66,7 @@ dsolver --strategy small-ball flop ahkd 5c5h9s y
 ```
 OutPut:
 ```
-  Move: Check/Fold
+Move: Check/Fold
 
 Hand Odd by River:
 TwoPair-------35.0%
