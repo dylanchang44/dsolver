@@ -1,1 +1,3 @@
 # dsolver
+
+todo: README documentation

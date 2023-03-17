@@ -3,6 +3,15 @@ name = "dsolver"
 version = "0.1.0"
 edition = "2021"
 
+description = "Offer simple strategy for given condition at Texas Hold'em"
+keywords = ["Texas Hold'em", "Poker"]
+repository = "https://github.com/reznorchang/dsolver"
+readme = "README.md"
+
+[lib]
+name = "dsolver"
+path = "src/lib.rs"
+
 [dependencies]
 clap = { version = "4.0.26", features = ["derive"] }
 bio = "1.1.0"

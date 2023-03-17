@@ -32,13 +32,13 @@ pub fn flop_distribution(cards: &BinaryHeap<(i8,char)>)->Vec<f32>{
 }
 
 //generate odd by out
-fn flop_out_to_perc(out:f32)->f32{
+pub fn flop_out_to_perc(out:f32)->f32{
     let left:f32=52.0-5.0;
     1.0 - (left-out)/left * (left-1.0-out)/(left-1.0)
 }
 
 //process straight, flush odd 
-fn straight_flush_odds(cards: &BinaryHeap<(i8,char)>)-> (f32, f32){
+pub fn straight_flush_odds(cards: &BinaryHeap<(i8,char)>)-> (f32, f32){
     //return (straight_odds,flush_odds)
     let mut straight_odds = 0.0;
     let mut flush_odds = 0.0;
@@ -121,8 +121,8 @@ fn straight_flush_odds(cards: &BinaryHeap<(i8,char)>)-> (f32, f32){
     (straight_odds,flush_odds)
 }
 
-//process 2pair,ThreeOfAKind,FullHouse,FourOfAKind off
-fn multicard_odds(hand_status:(i8,bool,bool))->(f32,f32,f32,f32){
+//process 2pair,ThreeOfAKind,FullHouse,FourOfAKind odd
+pub fn multicard_odds(hand_status:(i8,bool,bool))->(f32,f32,f32,f32){
     let mut odd=(0.0,0.0,0.0,0.0);
     if hand_status.2 {odd.3=1.0;}
     else if hand_status.1{
@@ -156,7 +156,7 @@ fn multicard_odds(hand_status:(i8,bool,bool))->(f32,f32,f32,f32){
 }
 
 //return (pairs,trips,quads)
-fn process_multicards(cards: &BinaryHeap<(i8,char)>)->(i8,bool,bool){
+pub fn process_multicards(cards: &BinaryHeap<(i8,char)>)->(i8,bool,bool){
     let mut heap=cards.clone();
     let mut type_count=(0,false,false);
     let mut type_counter=vec![1,1,1];
