@@ -21,9 +21,11 @@ cargo install --path .
 ## Usage
 
 ### --help
+Command:
 ```sh
 dsolver --help
 ```
+OutPut:
 ```
 A cli tool that generate long-ball/small-ball poker strategy at preflop/flop
 
@@ -40,12 +42,15 @@ Options:
   -V, --version              Print version
 ```
 ### pre-flop
+Usage: 
 ```sh
 Usage: dsolver --strategy <STRATEGY> pre-flop <HOLE> <POSITION> <CALLER> <LIMPER>
 ```
+Command:
 ```
 dsolver --strategy long-ball pre-flop ahkh 1 0 5
 ```
+OutPut:
 ```
 Move: Bet 9 BB
 ```
