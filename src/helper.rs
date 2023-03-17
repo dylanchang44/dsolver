@@ -99,7 +99,7 @@ pub fn check_pair(cards: &BinaryHeap<(i8,char)>) -> Option<i8>{
     None
 }
 
-fn hole_suited(cards: &BinaryHeap<(i8,char)>)->bool{
+pub fn hole_suited(cards: &BinaryHeap<(i8,char)>)->bool{
     let mut prev='a';
     for card in cards{
         if prev==card.1 {return true;}
